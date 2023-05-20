@@ -92,9 +92,13 @@ function addToCart(productId) {
       });
     }
 
+    // Store the updated cart data in session storage
+    sessionStorage.setItem('cart', JSON.stringify(cart));
+
     renderCart();
   }
 }
+
 
 // Remove item from cart
 function removeFromCart(productId) {
